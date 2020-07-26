@@ -1,0 +1,11 @@
+version: '3'
+services:
+  redmine:
+    container_name: "redmine_web"
+    build:
+        context: "./"
+        dockerfile: "Dockerfile"
+    volumes:
+      - "./:/var/www/html"
+    ports:
+      - 80:3000
